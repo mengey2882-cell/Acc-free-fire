@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>គេហទំព័រធម្មតាធម្មតា</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+            flex-direction: column;
+        }
+        #prank-button {
+            padding: 15px 30px;
+            font-size: 20px;
+            background-color: #ff4757;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        #prank-content {
+            display: none;
+            text-align: center;
+        }
+        #prank-image {
+            max-width: 80%;
+            height: auto;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="initial-state">
+        <h2>ចុចទីនេះដើម្បីមើលរឿងភ្ញាក់ផ្អើល!</h2>
+        <button id="prank-button" onclick="revealPrank()">ចុចមក</button>
+    </div>
+
+    <div id="prank-content">
+        <h2>ចាញ់បោកខ្ញុំបាត់! 😜</h2>
+        <img id="prank-image" src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3ZleHpwd3B5bDJ0NndpZ3M1bW1zZnR5cmw5eXN6bndpY3N5Z3ZsNyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Ju7l5y9osyymQ/giphy.gif" alt="Prank">
+    </div>
+
+    <audio id="prank-sound" src="https://www.soundjay.com/human/sounds/laughter-3.mp3"></audio>
+
+    <script>
+        function revealPrank() {
+            // លាក់ប៊ូតុងដើមចេញ
+            document.getElementById('initial-state').style.display = 'none';
+            
+            // បង្ហាញរូបភាព ឬ GIF បន្លាច/កំប្លែង
+            document.getElementById('prank-content').style.display = 'block';
+            
+            // ចាក់សំឡេង
+            var sound = document.getElementById('prank-sound');
+            sound.play();
+        }
+    </script>
+
+</body>
+</html>
